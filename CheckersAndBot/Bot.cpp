@@ -52,7 +52,7 @@ int negamax(Board& board, const int depth, int alpha, int beta, int colour) {
 		Board* newBoard = new Board(board);
 		newBoard->makeMove(moves->front());
 
-		// Must deallocate moves dynamically instead of at the end to avoid scary memory limits
+		// Must deallocate moves dynamically instead of at the end to avoid piling up tons of move objects in memory
 		delete moves->front();
 		moves->pop_front();
 
