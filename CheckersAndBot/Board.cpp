@@ -27,7 +27,7 @@ int indexFromCoordinate(int file, int rank) {
 
 void clearMoveList(std::list<Move*>* moves) {
 
-	// Free all elements and then the list
+	// Free all elements
 	while (!moves->empty()) {
 		delete moves->front();
 		moves->pop_front();
